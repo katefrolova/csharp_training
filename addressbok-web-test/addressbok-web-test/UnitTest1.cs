@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace addressbok_web_test
+namespace WebAddressbookTests
 {
     [TestClass]
     public class UnitTest1
@@ -9,6 +9,9 @@ namespace addressbok_web_test
         [TestMethod]
         public void TestMethod1()
         {
+           
         }
+
+      
     }
 }
