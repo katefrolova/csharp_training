@@ -19,12 +19,7 @@ namespace WebAddressbookTests
             contact.Aday = "7";
             contact.Amonth = "December";
             contact.NewGroup = "aaa";
-            //app.Contacts.CreateContact(contact);
-            app.Contacts
-                .InitContactsCreation()
-                .FillContactForm(contact)
-                .SubmitContactCreation()
-                .ReturnToHomePage();
+            app.Contacts.CreateContact();
             app.Auth.Logout();
         }
 

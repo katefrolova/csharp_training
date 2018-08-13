@@ -17,6 +17,14 @@ namespace WebAddressbookTests
            // this.driver = driver;
         }
 
+        internal void CreateContact(ContactData contact)
+        {
+           InitContactsCreation();
+           FillContactForm(contact);
+           SubmitContactCreation();
+           ReturnToHomePage();
+        }
+
         //public ContactHelper CreateContact(GroupData contact)
         //{
 
@@ -24,7 +32,6 @@ namespace WebAddressbookTests
         //    FillContactForm(contact);
         //    SubmitContactCreation();
         //    ReturnToHomePage();
-        //    manager.Navigator.GoToGroupsPage();
         //    return this;
         //}
 
