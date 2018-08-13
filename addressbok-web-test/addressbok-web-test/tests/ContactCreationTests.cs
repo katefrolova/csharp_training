@@ -13,19 +13,19 @@ namespace WebAddressbookTests
         [Test]
         public void ContactCreationTTest()
         {
-            GoToHomePage();
-            Login(new AccountData("admin","secret"));
-            InitContactsCreation();
+            navigator.GoToHomePage();
+            loginHelper.Login(new AccountData("admin","secret"));
+            contactHelper.InitContactsCreation();
             ContactData contact = new ContactData("ww","tt");
             contact.Bday = "4";
             contact.Bmonth = "March";
             contact.Aday = "7";
             contact.Amonth = "December";
             contact.NewGroup = "aaa";
-            FillContactForm(contact);
-            SubmitContactCreation();
-            ReturnToHomePage();
-            Logout();
+            contactHelper.FillContactForm(contact);
+            contactHelper.SubmitContactCreation();
+            contactHelper.ReturnToHomePage();
+            loginHelper.Logout();
         }
 
 

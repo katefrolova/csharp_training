@@ -15,13 +15,13 @@ namespace WebAddressbookTests
         [Test]
         public void GroupRemovalTest()
         {
-            GoToHomePage();
+            navigator.GoToHomePage();
             driver.FindElement(By.Name("user")).Clear();
-            Login(new AccountData("admin","secret"));
-            GoToGroupsPage();
-            SelectGroup(1);
-            RemoveGroup();
-            ReturnToGroupsPage();
+            loginHelper.Login(new AccountData("admin","secret"));
+            navigator.GoToGroupsPage();
+            groupHelper.SelectGroup(1);
+            groupHelper.RemoveGroup();
+            groupHelper.ReturnToGroupsPage();
         }
 
     }
