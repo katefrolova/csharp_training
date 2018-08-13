@@ -21,13 +21,28 @@ namespace WebAddressbookTests
 
         public ApplicationManager()
         {
+            FirefoxOptions options = new FirefoxOptions();
+            options.UseLegacyImplementation = true;
+            options.BrowserExecutableLocation = @"C:\Program Files\Mozilla Firefox ESR\firefox.exe";
+            driver = new FirefoxDriver(options);
+            baseURL = "http://localhost/";
+            //verificationErrors = new StringBuilder();
+
             //loginHelper = new LoginHelper(driver);
-            loginHelper = new LoginHelper(driver);
-            groupHelper = new GroupHelper(driver);
-            contactHelper = new ContactHelper(driver);
-            navigator = new NavigationHelper(driver, baseURL);
+            loginHelper = new LoginHelper(this);
+            groupHelper = new GroupHelper(this);
+            contactHelper = new ContactHelper(this);
+            navigator = new NavigationHelper(this, baseURL);
         }
 
+
+        public IWebDriver Driver
+        {
+            get
+            {
+                return driver;
+            }
+        }
         public void Stop()
         {
             try

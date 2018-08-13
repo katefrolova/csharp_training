@@ -11,12 +11,22 @@ namespace WebAddressbookTests
 {
     public class ContactHelper : HelperBase
     {
-        public ContactHelper(IWebDriver driver) 
-            :base(driver)
+        public ContactHelper(ApplicationManager manager) 
+            :base(manager)
         {
            // this.driver = driver;
         }
 
+        //public ContactHelper CreateContact(GroupData contact)
+        //{
+
+        //    InitContactsCreation();
+        //    FillContactForm(contact);
+        //    SubmitContactCreation();
+        //    ReturnToHomePage();
+        //    manager.Navigator.GoToGroupsPage();
+        //    return this;
+        //}
 
         public ContactHelper ReturnToHomePage()
         {

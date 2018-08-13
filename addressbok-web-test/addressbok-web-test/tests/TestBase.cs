@@ -13,9 +13,8 @@ namespace WebAddressbookTests
     public class TestBase
     {
         //
-        protected IWebDriver driver;
-        private StringBuilder verificationErrors;
-        protected string baseURL;
+        //protected IWebDriver driver;
+        //protected string baseURL;
         //
 
         protected ApplicationManager app;
@@ -23,14 +22,8 @@ namespace WebAddressbookTests
         [SetUp]
         public void SetupTest()
         {
-            FirefoxOptions options = new FirefoxOptions();
-            options.UseLegacyImplementation = true;
-            options.BrowserExecutableLocation = @"C:\Program Files\Mozilla Firefox ESR\firefox.exe";
-            driver = new FirefoxDriver(options);
-            baseURL = "http://localhost/";
-            verificationErrors = new StringBuilder();
-
             app = new ApplicationManager();
+
             app.Navigator.GoToHomePage();
             app.Auth.Login(new AccountData("admin", "secret"));
         }
