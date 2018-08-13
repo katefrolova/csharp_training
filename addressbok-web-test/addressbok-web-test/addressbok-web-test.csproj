@@ -68,15 +68,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ApplicationManager.cs" />
+    <Compile Include="appmanagerandhelpers\ApplicationManager.cs" />
     <Compile Include="models\AccountData.cs" />
     <Compile Include="models\ContactData.cs" />
-    <Compile Include="helper\GroupHelper.cs" />
-    <Compile Include="helper\ContactHelper.cs" />
+    <Compile Include="appmanagerandhelpers\GroupHelper.cs" />
+    <Compile Include="appmanagerandhelpers\ContactHelper.cs" />
     <Compile Include="models\GroupData.cs" />
-    <Compile Include="helper\HelperBase.cs" />
-    <Compile Include="helper\LoginHelper.cs" />
-    <Compile Include="helper\NavigationHelper.cs" />
+    <Compile Include="appmanagerandhelpers\HelperBase.cs" />
+    <Compile Include="appmanagerandhelpers\LoginHelper.cs" />
+    <Compile Include="appmanagerandhelpers\NavigationHelper.cs" />
     <Compile Include="Tests\GroupRemovalTest.cs" />
     <Compile Include="Tests\TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
