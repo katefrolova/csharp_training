@@ -28,6 +28,18 @@ namespace WebAddressbookTests
             navigator = new NavigationHelper(driver, baseURL);
         }
 
+        public void Stop()
+        {
+            try
+            {
+                driver.Quit();
+            }
+            catch (Exception)
+            {
+                // Ignore errors if unable to close the browser
+            }
+        }
+
         public LoginHelper Auth
         {
             get

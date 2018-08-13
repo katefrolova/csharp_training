@@ -12,9 +12,11 @@ namespace WebAddressbookTests
 {
     public class TestBase
     {
+        //
         protected IWebDriver driver;
         private StringBuilder verificationErrors;
         protected string baseURL;
+        //
 
         protected ApplicationManager app;
 
@@ -34,15 +36,7 @@ namespace WebAddressbookTests
         [TearDown]
         public void TeardownTest()
         {
-            try
-            {
-                driver.Quit();
-            }
-            catch (Exception)
-            {
-                // Ignore errors if unable to close the browser
-            }
-            Assert.AreEqual("", verificationErrors.ToString());
+            app.Stop();
         }
 
 
