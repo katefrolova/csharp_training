@@ -21,6 +21,7 @@ namespace WebAddressbookTests
 
         public ApplicationManager()
         {
+            //loginHelper = new LoginHelper(driver);
             loginHelper = new LoginHelper(driver);
             groupHelper = new GroupHelper(driver);
             contactHelper = new ContactHelper(driver);

@@ -18,17 +18,19 @@ namespace WebAddressbookTests
         }
 
 
-        public void ReturnToHomePage()
+        public ContactHelper ReturnToHomePage()
         {
             driver.FindElement(By.LinkText("home page")).Click();
+            return this;
         }
 
-        public void SubmitContactCreation()
+        public ContactHelper SubmitContactCreation()
         {
             driver.FindElement(By.Name("submit")).Click();
+            return this;
         }
 
-        public void FillContactForm(ContactData contact)
+        public ContactHelper FillContactForm(ContactData contact)
         {
             driver.FindElement(By.Name("firstname")).Clear();
             driver.FindElement(By.Name("firstname")).SendKeys(contact.Firstname);
@@ -77,11 +79,13 @@ namespace WebAddressbookTests
             driver.FindElement(By.Name("phone2")).SendKeys(contact.Phone2);
             driver.FindElement(By.Name("notes")).Clear();
             driver.FindElement(By.Name("notes")).SendKeys(contact.Notes2);
+            return this;
         }
 
-        public void InitContactsCreation()
+        public ContactHelper InitContactsCreation()
         {
             driver.FindElement(By.LinkText("add new")).Click();
+            return this;
         }
 
     }
