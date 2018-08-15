@@ -12,10 +12,8 @@ namespace WebAddressbookTests
 {
     public class TestBase
     {
-        //
         //protected IWebDriver driver;
         //protected string baseURL;
-        //
 
         protected ApplicationManager app;
 
@@ -23,7 +21,6 @@ namespace WebAddressbookTests
         public void SetupTest()
         {
             app = new ApplicationManager();
-
             app.Navigator.GoToHomePage();
             app.Auth.Login(new AccountData("admin", "secret"));
         }

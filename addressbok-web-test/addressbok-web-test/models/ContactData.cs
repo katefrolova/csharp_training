@@ -33,9 +33,6 @@ namespace WebAddressbookTests
         private string aday = "";
         private string amonth = "";
         private string ayear = "";
-        private string newgroup = "";
-
-
 
 
         public ContactData(string firstname, string secondname)
@@ -319,18 +316,6 @@ namespace WebAddressbookTests
                 ayear = value;
             }
         }
-        public string NewGroup
-        {
-            get
-            {
-                return newgroup;
-            }
-            set
-            {
-                newgroup = value;
-            }
-        }
-
 
     }
 }
