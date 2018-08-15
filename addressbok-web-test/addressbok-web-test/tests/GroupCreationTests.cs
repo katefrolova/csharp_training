@@ -23,13 +23,11 @@ namespace WebAddressbookTests
 
         [Test]
         public void EmptyGroupCreationTest()
-        {
-            
+        {         
             GroupData group = new GroupData("");
             group.Header = "";
             group.Footer = "";
 
-            //app.Navigator.GoToGroupsPage();
             app.Groups.Create(group);
             app.Auth.Logout();
         }
