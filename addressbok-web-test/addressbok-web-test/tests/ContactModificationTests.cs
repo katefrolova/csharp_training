@@ -14,6 +14,7 @@ namespace WebAddressbookTests
         public void ContactModificationTest()
         {
             ContactData contact = new ContactData("d", "dd");
+            contact.Middlename = null;
             contact.Bday = "14";
             contact.Bmonth = "December";
             contact.Aday = "17";
