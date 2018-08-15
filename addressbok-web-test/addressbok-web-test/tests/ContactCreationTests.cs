@@ -18,11 +18,9 @@ namespace WebAddressbookTests
             contact.Bmonth = "March";
             contact.Aday = "7";
             contact.Amonth = "December";
-            contact.NewGroup = "aaa";
             app.Contacts.CreateContact(contact);
             app.Auth.Logout();
         }
-
 
     }
 }

@@ -69,7 +69,9 @@
   </Choose>
   <ItemGroup>
     <Compile Include="appmanagerandhelpers\ApplicationManager.cs" />
-    <Compile Include="GroupModificationTests.cs" />
+    <Compile Include="ContactRemovalTests.cs" />
+    <Compile Include="Tests\ContactModificationTests.cs" />
+    <Compile Include="Tests\GroupModificationTests.cs" />
     <Compile Include="models\AccountData.cs" />
     <Compile Include="models\ContactData.cs" />
     <Compile Include="appmanagerandhelpers\GroupHelper.cs" />
