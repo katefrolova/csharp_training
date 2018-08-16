@@ -6,7 +6,6 @@ D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\obj\Deb
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\nunit.framework.dll
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\WebDriver.dll
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\WebDriver.Support.dll
-D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\nunit.framework.pdb
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\nunit.framework.xml
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\WebDriver.xml
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\WebDriver.Support.xml

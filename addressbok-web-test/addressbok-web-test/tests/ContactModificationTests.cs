@@ -20,7 +20,7 @@ namespace WebAddressbookTests
             contact.Aday = "17";
             contact.Amonth = "December";
             app.Contacts.ContactModify(2, contact);
-            app.Auth.Logout();
+            //app.Auth.Logout();
         }
     }
 }
