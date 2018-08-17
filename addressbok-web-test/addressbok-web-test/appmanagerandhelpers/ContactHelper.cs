@@ -35,8 +35,12 @@ namespace WebAddressbookTests
         public ContactHelper ContactDelete(int l)
         {
             manager.Navigator.GoToHomePage();
+            if (!IsElementPresent(By.Name("selected[]")))
+            {
+                CreateContact(new ContactData("tt", "zz"));
+            }
             SelectContact(l);
-            RemoveContact(l);
+            RemoveContact();
             DriverAlert();
             return this;
         }
@@ -44,6 +48,10 @@ namespace WebAddressbookTests
         public ContactHelper ContactModify(int p, ContactData contact)
         {
             manager.Navigator.GoToHomePage();
+            if (!IsElementPresent(By.Name("selected[]")))
+            {
+                CreateContact(new ContactData("tt", "zz"));
+            }
             InitContactModification(p);
             FillContactForm(contact);
             SubmitContactModification();
@@ -82,13 +90,6 @@ namespace WebAddressbookTests
             Type(By.Name("email2"), contact.Email2);
             Type(By.Name("email3"), contact.Email3);
             Type(By.Name("homepage"), contact.Homepage);
-            Type(By.Name("byear"), contact.Byear);
-            Type(By.Name("ayear"), contact.Ayear);
-            new SelectElement(driver.FindElement(By.Name("bday"))).SelectByText(contact.Bday);
-            new SelectElement(driver.FindElement(By.Name("bmonth"))).SelectByText(contact.Bmonth);
-
-            new SelectElement(driver.FindElement(By.Name("aday"))).SelectByText(contact.Aday);
-            new SelectElement(driver.FindElement(By.Name("amonth"))).SelectByText(contact.Amonth);
             Type(By.Name("address2"), contact.Address2);
             Type(By.Name("phone2"), contact.Phone2);
             Type(By.Name("notes"), contact.Notes2);
@@ -119,7 +120,7 @@ namespace WebAddressbookTests
             driver.FindElement(By.XPath("(//input[@name='update'])[2]")).Click();
             return this;
         }
-        public ContactHelper RemoveContact(int number)
+        public ContactHelper RemoveContact()
         {
             driver.FindElement(By.XPath("//input[@value='Delete']")).Click();
             return this;

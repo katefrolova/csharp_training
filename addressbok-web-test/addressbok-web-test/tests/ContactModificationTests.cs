@@ -15,12 +15,7 @@ namespace WebAddressbookTests
         {
             ContactData contact = new ContactData("d", "dd");
             contact.Middlename = null;
-            contact.Bday = "14";
-            contact.Bmonth = "December";
-            contact.Aday = "17";
-            contact.Amonth = "December";
-            app.Contacts.ContactModify(2, contact);
-            //app.Auth.Logout();
+            app.Contacts.ContactModify(1, contact);
         }
     }
 }

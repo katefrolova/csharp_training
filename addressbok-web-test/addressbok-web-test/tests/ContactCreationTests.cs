@@ -14,12 +14,7 @@ namespace WebAddressbookTests
         public void ContactCreationTTest()
         {
             ContactData contact = new ContactData("ww","tt");
-            contact.Bday = "4";
-            contact.Bmonth = "March";
-            contact.Aday = "7";
-            contact.Amonth = "December";
             app.Contacts.CreateContact(contact);
-           // app.Auth.Logout();
         }
 
     }

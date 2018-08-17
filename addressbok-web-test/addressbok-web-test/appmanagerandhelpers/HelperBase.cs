@@ -33,8 +33,8 @@ namespace WebAddressbookTests
         {
             try
             {
-                // IWebElement t = driver.FindElement(by);
-                driver.FindElement(by);
+                IWebElement t = driver.FindElement(by);
+               // driver.FindElement(by);
                 return true;
             }
             catch (NoSuchElementException)
