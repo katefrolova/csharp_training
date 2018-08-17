@@ -56,7 +56,6 @@ namespace WebAddressbookTests
                 ApplicationManager newInstacnce = new ApplicationManager();
                 
                 newInstacnce.Navigator.GoToHomePage();
-                //app.Value = new ApplicationManager();
                 app.Value = newInstacnce;
             }
             return app.Value;
