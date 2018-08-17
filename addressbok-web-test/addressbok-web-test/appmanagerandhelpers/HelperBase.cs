@@ -29,5 +29,19 @@ namespace WebAddressbookTests
             }
         }
 
+        public bool IsElementPresent(By by)
+        {
+            try
+            {
+                // IWebElement t = driver.FindElement(by);
+                driver.FindElement(by);
+                return true;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
+        }
+
     }
 }
