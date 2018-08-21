@@ -32,13 +32,22 @@ namespace WebAddressbookTests
             return this;
         }
 
-        public ContactHelper ContactDelete(int l)
+        public ContactHelper NoContactsCreated()
         {
-            manager.Navigator.GoToHomePage();
             if (!IsElementPresent(By.Name("selected[]")))
             {
                 CreateContact(new ContactData("tt", "zz"));
             }
+            return this;
+        }
+
+        public ContactHelper ContactDelete(int l)
+        {
+            manager.Navigator.GoToHomePage();
+            //if (!IsElementPresent(By.Name("selected[]")))
+            //{
+            //    CreateContact(new ContactData("tt", "zz"));
+            //}
             SelectContact(l);
             RemoveContact();
             DriverAlert();
@@ -48,10 +57,6 @@ namespace WebAddressbookTests
         public ContactHelper ContactModify(int p, ContactData contact)
         {
             manager.Navigator.GoToHomePage();
-            if (!IsElementPresent(By.Name("selected[]")))
-            {
-                CreateContact(new ContactData("tt", "zz"));
-            }
             InitContactModification(p);
             FillContactForm(contact);
             SubmitContactModification();

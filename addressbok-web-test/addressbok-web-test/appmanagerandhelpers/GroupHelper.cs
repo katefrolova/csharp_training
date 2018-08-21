@@ -99,5 +99,15 @@ namespace WebAddressbookTests
             return this;
         }
 
+
+        //public GroupHelper NoGroupsCreated(GroupData group)
+        //{
+        //    if (!IsElementPresent(By.Name("selected[]")))
+        //    {
+        //        Create(new GroupData("wwww"));
+        //    }
+        //    return this;
+        //}
+
     }
 }
