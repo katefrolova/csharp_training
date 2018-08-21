@@ -40,18 +40,19 @@ namespace WebAddressbookTests
         }
 
 
-        public GroupHelper Remove(int v)
+        public GroupHelper Remove(int p)
         {
             manager.Navigator.GoToGroupsPage();
-            SelectGroup(v);
-            RemoveGroup();
+            SelectGroup(p);
+            RemoveGroup(p);
             ReturnToGroupsPage();
             return this;
         }
 
-        public GroupHelper RemoveGroup()
+        public GroupHelper RemoveGroup(int number)
         {
-            driver.FindElement(By.Name("delete")).Click();
+            // driver.FindElement(By.Name("delete")).Click();
+            driver.FindElement(By.XPath("(//input[@name='delete'])[" + number + "]")).Click();
             return this;
         }
 
@@ -100,14 +101,15 @@ namespace WebAddressbookTests
         }
 
 
-        //public GroupHelper NoGroupsCreated(GroupData group)
-        //{
-        //    if (!IsElementPresent(By.Name("selected[]")))
-        //    {
-        //        Create(new GroupData("wwww"));
-        //    }
-        //    return this;
-        //}
+        public GroupHelper NoGroupsCreated()
+        {
+            manager.Navigator.GoToGroupsPage();
+            if (!IsElementPresent(By.Name("selected[]")))
+            {
+                Create(new GroupData("wwww"));
+            }
+            return this;
+        }
 
     }
 }
