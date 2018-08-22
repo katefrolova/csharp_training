@@ -26,6 +26,24 @@ namespace WebAddressbookTests
            return this;
         }
 
+        public List<ContactData> GetContactList()
+        {
+            List<ContactData> contacts = new List<ContactData>();
+            manager.Navigator.GoToHomePage();
+            ICollection<IWebElement> elementsFirstName = driver.FindElements(By.XPath(".//*[@id='maintable']/tbody/tr/td[3]"));
+            ICollection<IWebElement> elementsLastName = driver.FindElements(By.XPath(".//*[@id='maintable']/tbody/tr/td[2]"));
+            //foreach (IWebElement element in elements)
+            //{
+            //    //GroupData group = new GroupData(element.Text);
+            //    contacts.Add(new ContactData(element.Text));
+            //}
+            for (int i = 0; i < elementsFirstName.Count; i++)
+            {
+                contacts.Add(new ContactData(elementsFirstName.ElementAt<IWebElement>(i).Text, elementsLastName.ElementAt<IWebElement>(i).Text));
+            }
+            return contacts;
+        }
+
         public ContactHelper DriverAlert()
         {
             driver.SwitchTo().Alert().Accept();
@@ -44,10 +62,6 @@ namespace WebAddressbookTests
         public ContactHelper ContactDelete(int l)
         {
             manager.Navigator.GoToHomePage();
-            //if (!IsElementPresent(By.Name("selected[]")))
-            //{
-            //    CreateContact(new ContactData("tt", "zz"));
-            //}
             SelectContact(l);
             RemoveContact();
             DriverAlert();
