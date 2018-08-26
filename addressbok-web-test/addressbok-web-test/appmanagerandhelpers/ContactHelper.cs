@@ -26,22 +26,36 @@ namespace WebAddressbookTests
            return this;
         }
 
+        //public List<ContactData> GetContactList()
+        //{
+        //    List<ContactData> contacts = new List<ContactData>();
+        //    manager.Navigator.GoToHomePage();
+        //    ICollection<IWebElement> elementsFirstName = driver.FindElements(By.XPath(".//*[@id='maintable']/tbody/tr/td[3]"));
+        //    ICollection<IWebElement> elementsLastName = driver.FindElements(By.XPath(".//*[@id='maintable']/tbody/tr/td[2]"));
+        //    for (int i = 0; i < elementsFirstName.Count; i++)
+        //    {
+        //        contacts.Add(new ContactData(elementsFirstName.ElementAt<IWebElement>(i).Text, elementsLastName.ElementAt<IWebElement>(i).Text));
+        //    }
+        //    return contacts;
+        //}
+
         public List<ContactData> GetContactList()
         {
-            List<ContactData> contacts = new List<ContactData>();
+            List<ContactData> contact = new List<ContactData>();
             manager.Navigator.GoToHomePage();
-            ICollection<IWebElement> elementsFirstName = driver.FindElements(By.XPath(".//*[@id='maintable']/tbody/tr/td[3]"));
-            ICollection<IWebElement> elementsLastName = driver.FindElements(By.XPath(".//*[@id='maintable']/tbody/tr/td[2]"));
-            //foreach (IWebElement element in elements)
-            //{
-            //    //GroupData group = new GroupData(element.Text);
-            //    contacts.Add(new ContactData(element.Text));
-            //}
-            for (int i = 0; i < elementsFirstName.Count; i++)
+            ICollection<IWebElement> elements = driver.FindElements(By.CssSelector("tr"));
+            int row = 0;
+            foreach (IWebElement element in elements)
             {
-                contacts.Add(new ContactData(elementsFirstName.ElementAt<IWebElement>(i).Text, elementsLastName.ElementAt<IWebElement>(i).Text));
+                if (row > 0)
+                {
+                    string first = element.FindElement(By.XPath("td[3]")).Text;
+                    string second = element.FindElement(By.XPath("td[2]")).Text;
+                    contact.Add(new ContactData(first, second));
+                }
+                row++;
             }
-            return contacts;
+            return contact;
         }
 
         public ContactHelper DriverAlert()

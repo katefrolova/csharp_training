@@ -45,8 +45,22 @@ namespace WebAddressbookTests
             {
                 return true;
             }
-            return Firstname == other.Firstname && Secondname == other.Secondname;
+            return Secondname == other.Secondname && Firstname == other.Firstname;
         }
+
+        //public int CompareTo(ContactData other)
+        //{
+        //    if (Object.ReferenceEquals(other, null))
+        //    {
+        //        return 1;
+        //    }
+        //    if (Object.ReferenceEquals(this.Secondname, other.Secondname) == true)
+        //    {
+        //        return Firstname.CompareTo(other.Firstname);
+        //    }
+        //    return Secondname.CompareTo(other.Secondname);
+        //    //return Firstname.CompareTo(other.Firstname) & Secondname.CompareTo(other.Secondname);
+        //}
 
         public int CompareTo(ContactData other)
         {
@@ -54,12 +68,9 @@ namespace WebAddressbookTests
             {
                 return 1;
             }
-            if (Object.ReferenceEquals(this.Secondname, other.Secondname) == true)
-            {
-                return Firstname.CompareTo(other.Firstname);
-            }
-            return Secondname.CompareTo(other.Secondname);
-            //return Firstname.CompareTo(other.Firstname) & Secondname.CompareTo(other.Secondname);
+            string fs = Firstname + Secondname;
+            string fsRef = other.Firstname + other.Secondname;
+            return fs.CompareTo(fsRef);
         }
 
         public override string ToString()
