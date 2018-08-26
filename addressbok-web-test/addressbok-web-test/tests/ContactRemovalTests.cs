@@ -18,6 +18,8 @@ namespace WebAddressbookTests
 
             app.Contacts.ContactDelete(1);
 
+           // Assert.AreEqual(oldGroups.Count - 1, app.Groups.GetGroupCount());
+
             List<ContactData> newContacts = app.Contacts.GetContactList();
             oldContacts.RemoveAt(0);
             Assert.AreEqual(oldContacts, newContacts);
