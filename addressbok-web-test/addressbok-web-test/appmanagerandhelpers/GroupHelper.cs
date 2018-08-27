@@ -34,7 +34,7 @@ namespace WebAddressbookTests
         {
             if (groupCache == null)
             {
-                groupCache = new List<GroupData> ();
+                groupCache = new List<GroupData>();
                 manager.Navigator.GoToGroupsPage();
                 ICollection<IWebElement> elements = driver.FindElements(By.CssSelector("span.group"));
                 foreach (IWebElement element in elements)
@@ -43,7 +43,7 @@ namespace WebAddressbookTests
                     groupCache.Add(new GroupData(element.Text));
                 }
             }
-           
+
             return new List<GroupData>(groupCache);
         }
 
@@ -70,20 +70,20 @@ namespace WebAddressbookTests
 
         public GroupHelper RemoveGroup(int number)
         {
-           // driver.FindElement(By.Name("delete")).Click();
-            driver.FindElement(By.XPath("(//input[@name='delete'])[" + (number+1) + "]")).Click();
+            // driver.FindElement(By.Name("delete")).Click();
+            driver.FindElement(By.XPath("(//input[@name='delete'])[" + (number + 1) + "]")).Click();
             groupCache = null;
             return this;
         }
 
         public int GetGroupCount()
         {
-           return  driver.FindElements(By.CssSelector("span.group")).Count;
+            return driver.FindElements(By.CssSelector("span.group")).Count;
         }
 
         public GroupHelper SelectGroup(int index)
         {
-            driver.FindElement(By.XPath("(//input[@name='selected[]'])[" + (index+1) + "]")).Click();
+            driver.FindElement(By.XPath("(//input[@name='selected[]'])[" + (index + 1) + "]")).Click();
             return this;
         }
 
