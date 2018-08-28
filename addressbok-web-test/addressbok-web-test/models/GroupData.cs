@@ -28,6 +28,7 @@ namespace WebAddressbookTests
                 return true;
             }
             return Name == other.Name;
+           // return Name.Equals(other.Name, StringComparison.Ordinal); 
         }
 
         public override string ToString()
