@@ -7,6 +7,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using NUnit.Framework;
+using System.Text.RegularExpressions;
 
 namespace WebAddressbookTests
 {
@@ -225,5 +226,15 @@ namespace WebAddressbookTests
                 .FindElements(By.TagName("td"))[7]
                 .FindElement(By.TagName("a")).Click();
         }
+
+        public int GetNumberOfResults()
+        {
+            manager.Navigator.GoToHomePage();
+            string text = driver.FindElement(By.TagName("label")).Text;
+            Match m = new Regex(@"\d+").Match(text);
+            return Int32.Parse(m.Value);
+
+        } 
+
     }
 }
