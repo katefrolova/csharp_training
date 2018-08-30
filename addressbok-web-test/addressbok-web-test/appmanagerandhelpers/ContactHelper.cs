@@ -31,22 +31,10 @@ namespace WebAddressbookTests
 
         public int GetContactCount()
         {
-            return driver.FindElements(By.XPath(".//*[@id='maintable']/tbody/tr/td[3]")).Count;
+            //return driver.FindElements(By.XPath(".//*[@id='maintable']/tbody/tr/td[3]")).Count;
+            return driver.FindElements(By.Name("entry")).Count;
         }
         private List<ContactData> contactCache = null;
-
-        //public List<ContactData> GetContactList()
-        //{
-        //    List<ContactData> contacts = new List<ContactData>();
-        //    manager.Navigator.GoToHomePage();
-        //    ICollection<IWebElement> elementsFirstName = driver.FindElements(By.XPath(".//*[@id='maintable']/tbody/tr/td[3]"));
-        //    ICollection<IWebElement> elementsLastName = driver.FindElements(By.XPath(".//*[@id='maintable']/tbody/tr/td[2]"));
-        //    for (int i = 0; i < elementsFirstName.Count; i++)
-        //    {
-        //        contacts.Add(new ContactData(elementsFirstName.ElementAt<IWebElement>(i).Text, elementsLastName.ElementAt<IWebElement>(i).Text));
-        //    }
-        //    return contacts;
-        //}
 
         public List<ContactData> GetContactList()
         {
@@ -234,7 +222,15 @@ namespace WebAddressbookTests
             Match m = new Regex(@"\d+").Match(text);
             return Int32.Parse(m.Value);
 
-        } 
+        }
+
+        public string GetContactInformationFromProperty(int index)
+        {
+            manager.Navigator.GoToHomePage();
+            driver.FindElement(By.XPath("(//img[@alt='Details'])[" + (index + 1) + "]")).Click();
+            return driver.FindElement(By.Id("content")).Text;
+        }
+
 
     }
 }
