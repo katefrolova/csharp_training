@@ -22,8 +22,6 @@ namespace WebAddressbookTests
         {
             app = ApplicationManager.GetInstance();
         }
-
-
     }
 
 }
