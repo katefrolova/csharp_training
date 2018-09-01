@@ -11,6 +11,7 @@ namespace WebAddressbookTests
     {
         private string allPhones;
         private string allData;
+        private string allEmails;
 
         public ContactData(string firstname, string secondname)
         {
@@ -58,7 +59,7 @@ namespace WebAddressbookTests
 
         public override string ToString()
         {
-            return "firstname=" + Firstname + " " + "secondname=" + Secondname;
+            return "firstname=" + Firstname + " " + "\nsecondname=" + Secondname;
         }
 
         public override int GetHashCode()
@@ -127,7 +128,17 @@ namespace WebAddressbookTests
                 }
                 else
                 {
-                    return (Firstname + " " + Secondname);
+                    //return (Firstname + " " + Secondname);
+                    return (Firstname + " " + Secondname + "\r\n"
+    + Address + "\r\n"
+    + "\r\n"
+    + "H: " + HomePhone + "\r\n"
+    + "M: " + MobilePhone + "\r\n"
+    + "W: " + WorkPhone + "\r\n"
+    + "\r\n"
+    + Email + "\r\n"
+    + Email2 + "\r\n"
+    + Email3);
                 }
             }
             set
