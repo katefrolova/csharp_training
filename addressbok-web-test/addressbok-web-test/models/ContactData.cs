@@ -130,15 +130,15 @@ namespace WebAddressbookTests
                 {
                     //return (Firstname + " " + Secondname);
                     return (Firstname + " " + Secondname + "\r\n"
-    + Address + "\r\n"
-    + "\r\n"
-    + "H: " + HomePhone + "\r\n"
-    + "M: " + MobilePhone + "\r\n"
-    + "W: " + WorkPhone + "\r\n"
-    + "\r\n"
-    + Email + "\r\n"
-    + Email2 + "\r\n"
-    + Email3);
+                        + Address + "\r\n"
+                        + "\r\n"
+                        + "H: " + HomePhone + "\r\n"
+                        + "M: " + MobilePhone + "\r\n"
+                        + "W: " + WorkPhone + "\r\n"
+                        + "\r\n"
+                        + Email + "\r\n"
+                        + Email2 + "\r\n"
+                        + Email3);
                 }
             }
             set
