@@ -143,7 +143,7 @@ namespace WebAddressbookTests
 
         public ContactHelper SelectContact(int v)
         {
-            driver.FindElement(By.XPath("(//input[@name='selected[]'])[" + v + "]")).Click();
+            driver.FindElement(By.XPath("(//input[@name='selected[]'])[" + (v+1) + "]")).Click();
             contactCache = null;
             return this;
         }
@@ -222,13 +222,32 @@ namespace WebAddressbookTests
                 .FindElement(By.TagName("a")).Click();
         }
 
-        public int GetNumberOfResults()
+        //public int GetNumberOfResults()
+        //{
+        //    manager.Navigator.GoToHomePage();
+        //    string text = driver.FindElement(By.TagName("label")).Text;
+        //    Match m = new Regex(@"\d+").Match(text);
+        //    return Int32.Parse(m.Value);
+
+        //}
+
+        public int GetNumberOfResults(string searchString)
         {
             manager.Navigator.GoToHomePage();
-            string text = driver.FindElement(By.TagName("label")).Text;
-            Match m = new Regex(@"\d+").Match(text);
-            return Int32.Parse(m.Value);
+            //string text = driver.FindElement(By.TagName("label")).Text;
+            //Match m = new Regex(@"\d+").Match(text);
+            driver.FindElement(By.Name("searchstring")).SendKeys(searchString);
+            string text = driver.FindElement(By.Id("search_count")).Text;
+            return Int32.Parse(text);
+           // return Int32.Parse(m.Value);
 
+        }
+
+        public int GetNumberOfContactsSearch()
+        {
+            int countContacts = GetContactCount();
+            int countHidedContacts = driver.FindElement(By.CssSelector("#maintable")).FindElements(By.CssSelector("tr[style]")).Count;
+            return countContacts - countHidedContacts;
         }
 
         public string GetContactInformationFromProperty(int index)
