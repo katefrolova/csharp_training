@@ -1,6 +1,5 @@
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\addressbok-web-test.dll
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\addressbok-web-test.pdb
-D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\obj\Debug\addressbok-web-test.csprojResolveAssemblyReference.cache
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\obj\Debug\addressbok-web-test.dll
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\obj\Debug\addressbok-web-test.pdb
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\nunit.framework.dll
@@ -9,3 +8,5 @@ D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Deb
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\nunit.framework.xml
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\WebDriver.xml
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\WebDriver.Support.xml
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\groups.csv
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\obj\Debug\addressbok-web-test.csprojResolveAssemblyReference.cache

@@ -1,0 +1,13 @@
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\addressbook-test-data-generators.exe.config
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\addressbook-test-data-generators.exe
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\addressbook-test-data-generators.pdb
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\obj\Debug\addressbook-test-data-generators.csprojResolveAssemblyReference.cache
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\obj\Debug\addressbook-test-data-generators.exe
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\obj\Debug\addressbook-test-data-generators.pdb
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\groups.csv
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\addressbok-web-test.dll
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\WebDriver.dll
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\nunit.framework.dll
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\addressbok-web-test.pdb
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\WebDriver.xml
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\nunit.framework.xml
