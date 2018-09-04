@@ -12,3 +12,5 @@ D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Deb
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\obj\Debug\addressbok-web-test.csprojResolveAssemblyReference.cache
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\Newtonsoft.Json.dll
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\Newtonsoft.Json.xml
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\bin\Debug\groups.json
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbok-web-test\obj\Debug\addressbok-web-test.csproj.ResolveComReference.cache

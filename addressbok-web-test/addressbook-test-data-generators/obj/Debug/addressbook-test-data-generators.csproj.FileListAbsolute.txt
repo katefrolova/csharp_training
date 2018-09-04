@@ -13,3 +13,5 @@ D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-gener
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\nunit.framework.xml
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\Newtonsoft.Json.dll
 D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\Newtonsoft.Json.xml
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\bin\Debug\groups.json
+D:\1Kate\Courses\csharp_training\addressbok-web-test\addressbook-test-data-generators\obj\Debug\addressbook-test-data-generators.csproj.ResolveComReference.cache
