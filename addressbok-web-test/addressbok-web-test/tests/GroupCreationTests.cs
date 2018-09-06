@@ -9,6 +9,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using Newtonsoft.Json;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.Linq;
 
 namespace WebAddressbookTests
 {
@@ -49,7 +50,7 @@ namespace WebAddressbookTests
             Assert.AreEqual(oldGroups, newGroups);
         }
 
-     
+
 
         [Test]
         public void BadNameGroupCreationTest()
@@ -113,9 +114,9 @@ namespace WebAddressbookTests
             {
                 groups.Add(new GroupData()
                 {
-                    Name = range.Cells[i,1].Value,
-                    Header = range.Cells[i,2].Value,
-                    Footer = range.Cells[i,2].Value,
+                    Name = range.Cells[i, 1].Value,
+                    Header = range.Cells[i, 2].Value,
+                    Footer = range.Cells[i, 2].Value,
                 });
             }
             wb.Close();
@@ -124,5 +125,18 @@ namespace WebAddressbookTests
             return groups;
         }
 
+        [Test]
+        public void TestDBConnectivity()
+        {
+            DateTime start = DateTime.Now;
+            List<GroupData> fromUi = app.Groups.GetGroupList();
+            DateTime end = DateTime.Now;
+            System.Console.Out.WriteLine(end.Subtract(start));
+
+            start = DateTime.Now;
+            List<GroupData> fromDb = GroupData.GetAll();
+            end = DateTime.Now;
+            System.Console.Out.WriteLine(end.Subtract(end));
+        }
     }
 }
