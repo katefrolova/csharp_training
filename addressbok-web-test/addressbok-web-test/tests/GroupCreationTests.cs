@@ -11,10 +11,10 @@ using Newtonsoft.Json;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Linq;
 
-namespace WebAddressbookTests: GroupTestBase
+namespace WebAddressbookTests
 {
     [TestFixture]
-    public class GroupCreationTests : AuthTestBase
+    public class GroupCreationTests : GroupTestBase
     {
         public static IEnumerable<GroupData> RandomGroupDataProvider()
         {
