@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Linq;
 
-namespace WebAddressbookTests
+namespace WebAddressbookTests: GroupTestBase
 {
     [TestFixture]
     public class GroupCreationTests : AuthTestBase
@@ -37,13 +37,13 @@ namespace WebAddressbookTests
         public void GroupCreationTest(GroupData group)
         {
 
-            List<GroupData> oldGroups = app.Groups.GetGroupList();
+            List<GroupData> oldGroups = GroupData.GetAll();
 
             app.Groups.Create(group);
 
             Assert.AreEqual(oldGroups.Count + 1, app.Groups.GetGroupCount());
 
-            List<GroupData> newGroups = app.Groups.GetGroupList();
+            List<GroupData> newGroups = GroupData.GetAll();
             oldGroups.Add(group);
             oldGroups.Sort();
             newGroups.Sort();

@@ -104,8 +104,11 @@ namespace WebAddressbookTests
             }
         }
 
-       // [Column(Name = "group_id"), PrimaryKey,Identity]
-       public List<GroupData> GetAll()
+        [Column(Name = "group_id"), PrimaryKey, Identity]
+        public string Id { get; set; }
+
+        // [Column(Name = "group_id"), PrimaryKey,Identity]
+        public static List<GroupData> GetAll()
         {
             using (AddressBookDB db = new AddressBookDB()){
                return (from g in db.Groups select g).ToList();

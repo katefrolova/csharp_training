@@ -14,7 +14,7 @@ namespace WebAddressbookTests
     {
         //protected IWebDriver driver;
         //protected string baseURL;
-
+        public static bool PERFORM_LONG_UI_CHECKS = false;
         protected ApplicationManager app;
 
         [SetUp]

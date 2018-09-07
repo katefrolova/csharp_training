@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LinqToDB;
-using LinqToDB.Mapping;
+using NUnit.Framework;
+//using LinqToDB.Mapping;
 
 namespace WebAddressbookTests
 {
     public class AddressBookDB: LinqToDB.Data.DataConnection
     {
-        public AddressBookDB(): base("AddressBool") { }
+        public AddressBookDB(): base("AddressBook") { }
 
         public ITable<GroupData> Groups { get { return GetTable<GroupData>(); } }
-        public ITable<GroupData> Contacts { get { return GetTable<ContactData>(); } }
+        public ITable<ContactData> Contacts { get { return GetTable<ContactData>(); } }
     }
 }
