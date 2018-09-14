@@ -95,7 +95,7 @@ namespace WebAddressbookTests
         {
             manager.Navigator.GoToGroupsPage();
             SelectGroup(p);
-            RemoveGroup(p);
+            RemoveGroup();
             ReturnToGroupsPage();
             return this;
         }
@@ -108,10 +108,10 @@ namespace WebAddressbookTests
             ReturnToGroupsPage();
             return this;
         }
-        public GroupHelper RemoveGroup(int number)
+        public GroupHelper RemoveGroup()
         {
             // driver.FindElement(By.Name("delete")).Click();
-            driver.FindElement(By.XPath("(//input[@name='delete'])[" + (number + 1) + "]")).Click();
+            driver.FindElement(By.XPath("(//input[@name='delete'])[2]")).Click();
             groupCache = null;
             return this;
         }

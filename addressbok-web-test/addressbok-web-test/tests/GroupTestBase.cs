@@ -14,7 +14,7 @@ namespace WebAddressbookTests
         {
             if(PERFORM_LONG_UI_CHECKS)
             {
-                List<GrouapData> fromUI = AppDomain.Groups.GetGroupList();
+                List<GroupData> fromUI = app.Groups.GetGroupList();
                 List<GroupData> fromDB = GroupData.GetAll();
                 fromUI.Sort();
                 fromDB.Sort();
